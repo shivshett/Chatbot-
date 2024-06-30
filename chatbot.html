@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Aid Chatbot</title>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learner Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(to right, #ff7043, #ffb74d); /* Gradient with different colors */
+            color: #333; /* Dark text color */
+        }
+        header {
+            width: 100%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2); /* Semi-transparent header background */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em; /* Larger header font size */
+            font-weight: bold;
+            color: #fff; /* White text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for emphasis */
+        }
+        .content {
+            max-width: 800px;
+            padding: 20px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.3); /* Lighter content background */
+            border-radius: 30px; /* Rounded corners */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced box shadow */
+        }
+        .content h2 {
+            margin-top: 0;
+            font-size: 2.5em; /* Larger heading size */
+            color: #ff8a65; /* Lighter orange heading color */
+        }
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.6; /* Increased line height for readability */
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+            border-radius: 20px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 15px;
+        }
+        #ibm-web-chat {
+            width: 100%;
+            height: 500px;
+            border-radius: 20px; /* Rounded chat container */
+            overflow: hidden;
+        }
+        footer {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Darker footer background */
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+        }
+        footer p {
+            margin: 0;
+            font-size: 1em;
+            color: #fff; /* White text color */
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Language Learner Chatbot</h1>
+    </header>
+
+    <div class="content">
+        <h2>Welcome to the Language Learner Chatbot</h2>
+        <p>This chatbot is designed to help you learn and practice new languages effectively. Engage with the bot to get personalized lessons, practice conversations, and receive feedback to improve your skills.</p>
+    </div>
+
+    <div class="chat-container">
+        <div id="ibm-web-chat"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Language Learner
+
+
+    <!-- IBM Watson Assistant Web Chat script -->
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "f91ead66-9077-487d-b8a6-e31a903a0045", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "e88faace-eb62-42af-898b-98a9a818c24c", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</body>
+</html>
